@@ -25,11 +25,13 @@ puts "Creating restaurants..."
 puts "created restaurants"
 
 puts "Creating reviews ......"
-  review = Review.create(
-    content: Faker::Restaurant.review,
-    rating: rand(1..5),
-    restaurant_id: restaurant.id
-  )
+  rand(10..20).times do
+    review = Review.create(
+      content: Faker::Restaurant.review,
+      rating: rand(1..5),
+      restaurant_id: restaurant.id
+    )
+  end
 end
 
 puts "Finished!"
